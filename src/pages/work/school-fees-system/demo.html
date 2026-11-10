@@ -1,0 +1,108 @@
+<!--meta {
+  "title": "Interactive Demo: School Fees Management System | Makovelle",
+  "description": "Try Makovelle's interactive school fees management demo: search students, record payments and generate receipts. All data is fictional.",
+  "nav": "work",
+  "bare": true,
+  "noindex": true,
+  "bodyClass": "demo-body"
+} -->
+  <link rel="stylesheet" href="/assets/css/demo.css">
+  <a class="skip-link" href="#demo-main">Skip to the demo</a>
+  <header class="demo-top">
+    <div class="demo-top__inner">
+      <a class="logo" href="/" aria-label="Makovelle Technologies Studio — home">{{> logo}}<span class="logo__text"><span class="logo__name">Makovelle</span><span class="logo__sub">Technologies Studio</span></span></a>
+      <span class="demo-top__sep" aria-hidden="true"></span>
+      <p class="demo-top__app"><strong>Maconte Academy</strong> <span>Bursary · Term 1</span></p>
+      <div class="demo-top__actions">
+        <a class="btn btn--ghost btn--sm" href="/work/school-fees-system/">← Project details</a>
+        <a class="btn btn--gold btn--sm" href="/contact/?service=school-system">Discuss a system</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="demo-main" class="demo" tabindex="-1">
+    <div class="demo-banner" role="note">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.25"/><path d="M12 10.5v6M12 7.5v.01" stroke-linecap="round"/></svg>
+      <p><strong>Interactive demonstration.</strong> Maconte Academy, its students and all amounts are fictional. Everything runs in your browser; nothing is saved or sent. <button type="button" class="demo-link" data-reset>Reset demo data</button></p>
+    </div>
+
+    <section aria-labelledby="ov-h">
+      <h1 id="ov-h" class="demo-h1">Fee collection overview</h1>
+      <div class="demo-stats" data-stats aria-live="polite"></div>
+    </section>
+
+    <div class="demo-layout">
+      <section class="demo-panel" aria-labelledby="students-h">
+        <div class="demo-panel__head">
+          <h2 id="students-h">Student accounts</h2>
+          <p class="demo-count" data-count aria-live="polite"></p>
+        </div>
+        <div class="demo-toolbar" role="search">
+          <div class="demo-field demo-field--grow">
+            <label for="q">Search</label>
+            <input id="q" type="search" placeholder="Name or admission number" autocomplete="off" data-search>
+          </div>
+          <div class="demo-field">
+            <label for="fclass">Class</label>
+            <select id="fclass" data-filter-class><option value="">All classes</option></select>
+          </div>
+          <div class="demo-field">
+            <label for="fstatus">Status</label>
+            <select id="fstatus" data-filter-status>
+              <option value="">All</option><option value="paid">Paid</option><option value="part">Part-paid</option><option value="due">Not paid</option>
+            </select>
+          </div>
+        </div>
+        <div class="demo-table-wrap">
+          <table class="demo-table">
+            <caption class="visually-hidden">Student fee accounts for Term 1</caption>
+            <thead><tr><th scope="col">Student</th><th scope="col">Class</th><th scope="col" class="num">Billed</th><th scope="col" class="num">Paid</th><th scope="col" class="num">Balance</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+            <tbody data-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="demo-panel" aria-labelledby="recent-h">
+        <div class="demo-panel__head"><h2 id="recent-h">Recent receipts</h2></div>
+        <ol class="demo-receipts" data-receipts></ol>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="demo-dialog" id="pay-dialog" aria-labelledby="pay-h">
+    <form method="dialog" class="demo-dialog__body" data-pay-form novalidate>
+      <h2 id="pay-h">Record a payment</h2>
+      <p class="demo-dialog__sub" data-pay-student></p>
+      <div class="demo-field">
+        <label for="amount">Amount (US$)</label>
+        <input id="amount" name="amount" type="number" inputmode="decimal" min="1" step="0.01" required aria-describedby="amount-err">
+        <p class="demo-err" id="amount-err" aria-live="polite"></p>
+      </div>
+      <div class="demo-grid2">
+        <div class="demo-field">
+          <label for="method">Payment method</label>
+          <select id="method" name="method"><option>Bank transfer</option><option>Cash</option><option>Mobile money</option><option>Card</option></select>
+        </div>
+        <div class="demo-field">
+          <label for="ref">Reference <span class="opt">(optional)</span></label>
+          <input id="ref" name="ref" type="text" maxlength="40" autocomplete="off">
+        </div>
+      </div>
+      <div class="demo-dialog__foot">
+        <button class="btn btn--ghost" type="button" data-close>Cancel</button>
+        <button class="btn btn--gold" type="submit">Save &amp; issue receipt</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="demo-dialog demo-dialog--receipt" id="receipt-dialog" aria-labelledby="rc-h">
+    <div class="demo-dialog__body">
+      <div class="receipt" data-receipt></div>
+      <div class="demo-dialog__foot">
+        <button class="btn btn--ghost" type="button" data-close>Close</button>
+        <button class="btn btn--gold" type="button" data-print>Print receipt</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/assets/js/demo.js" defer></script>

@@ -1,0 +1,223 @@
+<!--meta {
+  "title": "Maconte Academy — Demo School Website by Makovelle",
+  "description": "A live demonstration school website for Maconte Academy, a fictional private school, designed and built by Makovelle Technologies Studio.",
+  "bare": true,
+  "noindex": true,
+  "bodyClass": "school-body",
+  "backUrl": "/work/school-website/"
+} -->
+  <link rel="stylesheet" href="/assets/css/school-demo.css">
+  <a class="skip-link" href="#sc-main">Skip to main content</a>
+{{> demo-ribbon}}
+
+  <header class="sc-header" data-sc-header>
+    <div class="sc-wrap sc-header__inner">
+      <a class="sc-brand" href="#top" aria-label="Maconte Academy — top of page">{{> school-crest}}<span><strong>Maconte Academy</strong><small>Learn · Lead · Serve</small></span></a>
+      <nav class="sc-nav" aria-label="School">
+        <ul id="sc-menu" data-sc-menu>
+          <li><a href="#about">About</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#life">Student life</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#news">News &amp; events</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="sc-nav__portal"><a href="/work/parent-portal/demo/">Parent portal</a></li>
+        </ul>
+      </nav>
+      <a class="sc-btn sc-btn--gold sc-header__cta" href="#enquire">Apply now</a>
+      <button class="sc-toggle" type="button" aria-expanded="false" aria-controls="sc-menu" data-sc-toggle><span class="visually-hidden">Menu</span><span aria-hidden="true"></span></button>
+    </div>
+  </header>
+
+  <main id="sc-main" tabindex="-1">
+    <section class="sc-hero" id="top" aria-labelledby="sc-hero-h">
+      <div class="sc-wrap sc-hero__grid">
+        <div>
+          <p class="sc-kicker">Independent secondary school · Form 1 to Upper 6</p>
+          <h1 id="sc-hero-h">A place to learn, <em>lead</em> and grow.</h1>
+          <p class="sc-hero__text">At Maconte Academy, every learner is known, challenged and supported to become a confident, capable and caring young adult.</p>
+          <div class="sc-row">
+            <a class="sc-btn sc-btn--gold" href="#admissions">Admissions 2027</a>
+            <a class="sc-btn sc-btn--line" href="#enquire">Book a campus visit</a>
+          </div>
+        </div>
+        <aside class="sc-dates" aria-labelledby="sc-dates-h">
+          <p class="sc-dates__eyebrow">Admissions open</p>
+          <h2 id="sc-dates-h">Key dates for 2027 entry</h2>
+          <ol>
+            <li><time datetime="2026-11-21">21 Nov</time><span><strong>Open morning</strong>Campus tours and meet the teachers</span></li>
+            <li><time datetime="2027-01-15">15 Jan</time><span><strong>Applications close</strong>Form 1 and Lower 6 entry</span></li>
+            <li><time datetime="2027-01-23">23 Jan</time><span><strong>Entrance assessment</strong>English and Mathematics</span></li>
+          </ol>
+          <a class="sc-link" href="#admissions">How to apply →</a>
+        </aside>
+      </div>
+    </section>
+
+    <nav class="sc-quick" aria-label="Quick links">
+      <div class="sc-wrap">
+        <ul>
+          <li><a href="#admissions"><span>01</span>Admissions</a></li>
+          <li><a href="#fees"><span>02</span>Fees &amp; payments</a></li>
+          <li><a href="#news"><span>03</span>Term calendar</a></li>
+          <li><a href="/work/parent-portal/demo/"><span>04</span>Parent portal</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="sc-section" id="about" aria-labelledby="about-h">
+      <div class="sc-wrap sc-split">
+        <div>
+          <p class="sc-kicker">Welcome</p>
+          <h2 id="about-h" class="sc-h2">A school built on <em>character</em> and <em>curiosity.</em></h2>
+        </div>
+        <div class="sc-prose">
+          <p>Maconte Academy is an independent day school for learners from Form 1 to Upper 6. Small classes, dedicated teachers and a strong pastoral system mean that no child goes unnoticed.</p>
+          <p>We believe education is about more than examination results. Alongside rigorous academics, our learners take part in sport, the arts, service and leadership, discovering what they are good at and what they care about.</p>
+          <blockquote class="sc-quote">“Our promise to every family is simple: we will know your child, challenge them, and help them become their best self.”<cite>Head of School</cite></blockquote>
+        </div>
+      </div>
+      <div class="sc-wrap">
+        <ul class="sc-values">
+          <li><strong>Integrity</strong><span>We do the right thing, even when no one is watching.</span></li>
+          <li><strong>Curiosity</strong><span>We ask questions, explore ideas and love learning.</span></li>
+          <li><strong>Service</strong><span>We use our gifts to make our community better.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sc-section sc-section--cream" id="academics" aria-labelledby="acad-h">
+      <div class="sc-wrap">
+        <div class="sc-head">
+          <p class="sc-kicker">Academics</p>
+          <h2 id="acad-h" class="sc-h2">A broad, <em>demanding</em> curriculum.</h2>
+          <p>Learners follow a well-rounded programme in the junior forms, then specialise for O and A Level with guidance from subject teachers and careers advisors.</p>
+        </div>
+        <ul class="sc-cards">
+          <li><h3>Sciences</h3><p>Biology, Chemistry, Physics and Combined Science, with practical laboratory work every week.</p></li>
+          <li><h3>Mathematics</h3><p>Core and Additional Mathematics, plus enrichment and olympiad preparation.</p></li>
+          <li><h3>Commercials</h3><p>Accounting, Business Studies and Economics with real-world case studies.</p></li>
+          <li><h3>Humanities</h3><p>History, Geography and Heritage Studies that build critical thinking.</p></li>
+          <li><h3>Languages</h3><p>English Language and Literature, Shona, Ndebele and French.</p></li>
+          <li><h3>Technology &amp; Arts</h3><p>Computer Science, Art and Design, and Music.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sc-section" id="life" aria-labelledby="life-h">
+      <div class="sc-wrap sc-split">
+        <div>
+          <p class="sc-kicker">Student life</p>
+          <h2 id="life-h" class="sc-h2">Every learner finds <em>their place.</em></h2>
+          <p class="sc-lead">Afternoons at Maconte are full: on the sports field, in the music room, at club meetings and in service projects across the community.</p>
+        </div>
+        <ul class="sc-life">
+          <li><span class="sc-life__icon" aria-hidden="true">◆</span><div><h3>Sport</h3><p>Athletics, football, netball, rugby, basketball, swimming and tennis.</p></div></li>
+          <li><span class="sc-life__icon" aria-hidden="true">◆</span><div><h3>Arts &amp; music</h3><p>Choir, marimba ensemble, drama productions and art exhibitions.</p></div></li>
+          <li><span class="sc-life__icon" aria-hidden="true">◆</span><div><h3>Clubs &amp; societies</h3><p>Debate, robotics, chess, Interact and the environmental club.</p></div></li>
+          <li><span class="sc-life__icon" aria-hidden="true">◆</span><div><h3>Leadership</h3><p>Prefects, house captains and a student council with a real voice.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sc-section sc-section--navy" id="admissions" aria-labelledby="adm-h">
+      <div class="sc-wrap">
+        <div class="sc-head">
+          <p class="sc-kicker">Admissions</p>
+          <h2 id="adm-h" class="sc-h2">Joining Maconte in <em>four steps.</em></h2>
+          <p>We welcome applications for Form 1 and Lower 6, and for other forms when places are available.</p>
+        </div>
+        <ol class="sc-steps">
+          <li><span>1</span><h3>Enquire &amp; visit</h3><p>Send an enquiry or join an open morning to see the school.</p></li>
+          <li><span>2</span><h3>Apply</h3><p>Submit the application form with the latest school report and birth certificate.</p></li>
+          <li><span>3</span><h3>Assessment</h3><p>Applicants sit short English and Mathematics assessments and meet a senior teacher.</p></li>
+          <li><span>4</span><h3>Offer &amp; enrolment</h3><p>Successful families receive an offer letter and enrolment pack.</p></li>
+        </ol>
+
+        <div class="sc-adm-grid">
+          <div class="sc-fees" id="fees">
+            <h3>Fees &amp; payments</h3>
+            <p>Fees are charged per term and may be paid by bank transfer, mobile money or at the bursary. Parents can view statements and download receipts in the <a href="/work/parent-portal/demo/">parent portal</a>.</p>
+            <table>
+              <caption class="visually-hidden">Tuition fees per term (fictional)</caption>
+              <thead><tr><th scope="col">Level</th><th scope="col">Per term</th></tr></thead>
+              <tbody>
+                <tr><td>Form 1 – Form 2</td><td>US$720</td></tr>
+                <tr><td>Form 3 – Form 4</td><td>US$760</td></tr>
+                <tr><td>Lower 6 – Upper 6</td><td>US$860</td></tr>
+              </tbody>
+            </table>
+            <p class="sc-small">Illustrative fees for a fictional school.</p>
+          </div>
+
+          <form class="sc-form" id="enquire" novalidate data-sc-form aria-labelledby="enq-h">
+            <h3 id="enq-h">Admissions enquiry</h3>
+            <div class="sc-form__row">
+              <div class="sc-field"><label for="p-name">Parent / guardian name</label><input id="p-name" name="name" autocomplete="name" required><p class="sc-err" aria-live="polite"></p></div>
+              <div class="sc-field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" autocomplete="email" required><p class="sc-err" aria-live="polite"></p></div>
+            </div>
+            <div class="sc-form__row">
+              <div class="sc-field"><label for="p-child">Child's name</label><input id="p-child" name="child" required><p class="sc-err" aria-live="polite"></p></div>
+              <div class="sc-field"><label for="p-form">Entry level</label>
+                <select id="p-form" name="level" required><option value="">Select…</option><option>Form 1</option><option>Form 2</option><option>Form 3</option><option>Form 4</option><option>Lower 6</option></select><p class="sc-err" aria-live="polite"></p></div>
+            </div>
+            <div class="sc-field"><label for="p-msg">Message <span class="sc-opt">(optional)</span></label><textarea id="p-msg" name="message" rows="3"></textarea></div>
+            <div class="sc-form__status" role="status" aria-live="polite" tabindex="-1" hidden data-sc-status></div>
+            <button class="sc-btn sc-btn--gold" type="submit">Send enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-section" id="news" aria-labelledby="news-h">
+      <div class="sc-wrap">
+        <div class="sc-head sc-head--row">
+          <div>
+            <p class="sc-kicker">News &amp; events</p>
+            <h2 id="news-h" class="sc-h2">What's happening at <em>Maconte.</em></h2>
+          </div>
+        </div>
+        <div class="sc-news-grid">
+          <ul class="sc-news">
+            <li><article><p class="sc-news__meta"><span>Academics</span> · 4 Nov 2026</p><h3>Upper 6 learners present research projects</h3><p>Our A Level scientists presented independent research to parents and guest judges in the school hall.</p></article></li>
+            <li><article><p class="sc-news__meta"><span>Sport</span> · 28 Oct 2026</p><h3>Inter-house athletics day</h3><p>Four houses, thirty events and one very close finish. Congratulations to every athlete who took part.</p></article></li>
+            <li><article><p class="sc-news__meta"><span>Community</span> · 17 Oct 2026</p><h3>Interact club library project</h3><p>Learners collected and catalogued books for a community library, with help from parents and staff.</p></article></li>
+          </ul>
+          <aside class="sc-events" aria-labelledby="ev-h">
+            <h3 id="ev-h">Upcoming events</h3>
+            <ol>
+              <li><time datetime="2026-11-21"><b>21</b>Nov</time><div><strong>Open morning</strong><span>08:30 – 12:00 · Main campus</span></div></li>
+              <li><time datetime="2026-11-27"><b>27</b>Nov</time><div><strong>Prize-giving ceremony</strong><span>10:00 · School hall</span></div></li>
+              <li><time datetime="2026-12-04"><b>04</b>Dec</time><div><strong>Term 3 ends</strong><span>Learners dismissed at 12:00</span></div></li>
+              <li><time datetime="2027-01-12"><b>12</b>Jan</time><div><strong>Term 1 begins</strong><span>Learners report by 07:30</span></div></li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-section sc-section--cream" id="contact" aria-labelledby="contact-h">
+      <div class="sc-wrap sc-split">
+        <div>
+          <p class="sc-kicker">Contact</p>
+          <h2 id="contact-h" class="sc-h2">We'd love to <em>show you around.</em></h2>
+          <p class="sc-lead">Our admissions office is happy to answer questions and arrange a visit at a time that suits your family.</p>
+        </div>
+        <dl class="sc-contact">
+          <div><dt>Admissions office</dt><dd>admissions@maconte-academy.example</dd></div>
+          <div><dt>Telephone</dt><dd>Shown here on a real school website</dd></div>
+          <div><dt>Address</dt><dd>Shown here on a real school website</dd></div>
+          <div><dt>Office hours</dt><dd>Monday – Friday, 07:30 – 16:30</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sc-footer">
+    <div class="sc-wrap sc-footer__inner">
+      <a class="sc-brand sc-brand--light" href="#top">{{> school-crest}}<span><strong>Maconte Academy</strong><small>Learn · Lead · Serve</small></span></a>
+      <p>© 2026 Maconte Academy (fictional). Demo website designed and built by <a href="/">Makovelle Technologies Studio</a>.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/school-demo.js" defer></script>

@@ -1,0 +1,63 @@
+<!--meta {
+  "title": "Parent Portal Demo — Maconte Academy | Makovelle",
+  "description": "Try a live parent portal demo: fee statements and receipts, attendance, school reports and notices for a fictional school. Built by Makovelle Technologies Studio.",
+  "bare": true,
+  "noindex": true,
+  "bodyClass": "portal-body",
+  "backUrl": "/work/parent-portal/"
+} -->
+  <link rel="stylesheet" href="/assets/css/school-demo.css">
+  <link rel="stylesheet" href="/assets/css/portal.css">
+{{> demo-ribbon}}
+
+  <!-- Sign-in screen -->
+  <main class="pt-login" id="pt-login" data-login-view>
+    <form class="pt-login__card" data-login-form aria-labelledby="login-h">
+      <div class="pt-login__brand">{{> school-crest}}<span><strong>Maconte Academy</strong><small>Parent portal</small></span></div>
+      <h1 id="login-h">Welcome back</h1>
+      <p class="pt-muted">Sign in to view your children's fees, attendance, reports and school notices.</p>
+      <div class="pt-field"><label for="lg-email">Email</label><input id="lg-email" type="email" value="r.moyo@parent.example" autocomplete="off" readonly></div>
+      <div class="pt-field"><label for="lg-pass">Password</label><input id="lg-pass" type="password" value="demo-password" autocomplete="off" readonly></div>
+      <button class="sc-btn sc-btn--navy pt-block" type="submit">Sign in to the demo</button>
+      <p class="pt-login__note">Demo account: no real password is needed. In a live portal, each parent has a secure personal login and sees only their own children.</p>
+    </form>
+  </main>
+
+  <!-- Portal app -->
+  <div class="pt-app" data-app hidden>
+    <header class="pt-top">
+      <div class="pt-wrap pt-top__inner">
+        <div class="pt-top__brand">{{> school-crest}}<span><strong>Maconte Academy</strong><small>Parent portal</small></span></div>
+        <div class="pt-top__user">
+          <span class="pt-avatar" aria-hidden="true">RM</span>
+          <span class="pt-top__name">Mrs Rutendo Moyo</span>
+          <button class="pt-signout" type="button" data-signout>Sign out</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="pt-sub">
+      <div class="pt-wrap">
+        <div class="pt-children" role="radiogroup" aria-label="Choose a child" data-children></div>
+        <nav class="pt-tabs" aria-label="Portal sections">
+          <a href="#overview" data-tab="overview">Overview</a>
+          <a href="#fees" data-tab="fees">Fees</a>
+          <a href="#attendance" data-tab="attendance">Attendance</a>
+          <a href="#reports" data-tab="reports">Reports</a>
+          <a href="#notices" data-tab="notices">Notices <span class="pt-badge" data-unread hidden></span></a>
+        </nav>
+      </div>
+    </div>
+
+    <main class="pt-wrap pt-main" id="pt-main" tabindex="-1" data-view aria-live="polite"></main>
+  </div>
+
+  <dialog class="pt-dialog" id="pt-dialog" aria-labelledby="pt-dialog-h">
+    <div class="pt-dialog__body" data-dialog-body></div>
+    <div class="pt-dialog__foot">
+      <button class="sc-btn sc-btn--ghost" type="button" data-dialog-close>Close</button>
+      <button class="sc-btn sc-btn--navy" type="button" data-dialog-print hidden>Print</button>
+    </div>
+  </dialog>
+
+  <script src="/assets/js/portal.js" defer></script>

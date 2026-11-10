@@ -1,0 +1,46 @@
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="logo logo--lg" href="/" aria-label="{{site.name}} — home">
+            {{> logo}}
+            <span class="logo__text"><span class="logo__name">Makovelle</span><span class="logo__sub">Technologies Studio</span></span>
+          </a>
+          <p class="site-footer__tagline">{{site.tagline}}</p>
+          <p class="muted small">Software development and technology solutions, based in {{site.country}}.</p>
+        </div>
+
+        <nav class="site-footer__col" aria-label="Footer — company">
+          <h2 class="site-footer__heading">Studio</h2>
+          <ul>
+            <li><a href="/about/">About us</a></li>
+            <li><a href="/work/">Our work</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="site-footer__col" aria-label="Footer — services">
+          <h2 class="site-footer__heading">Services</h2>
+          <ul>
+            <li><a href="/services/#websites">Website design &amp; development</a></li>
+            <li><a href="/services/#school-systems">School management systems</a></li>
+            <li><a href="/services/#custom-software">Custom business software</a></li>
+            <li><a href="/services/#automation">ERP &amp; business automation</a></li>
+            <li><a href="/services/#support">Maintenance &amp; support</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <h2 class="site-footer__heading">Get in touch</h2>
+          <ul class="site-footer__contact">
+            <li><a href="{{links.email}}">{{site.contact.email}}</a></li>
+            <li><a href="{{links.phone}}">{{site.contact.phone}}</a></li>
+            {{{raw.waFooter}}}
+            <li class="muted">{{site.contact.city}}, {{site.country}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© {{year}} {{site.name}}. All rights reserved.</p>
+        <a class="to-top" href="#main">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,33 @@
+{
+  "_readme": "Single source of truth for company details. Any value wrapped in [square brackets] is a PLACEHOLDER: the build lists them as warnings, and links that depend on them fall back safely to the contact page. Edit, then run `npm run build`.",
+
+  "name": "Makovelle Technologies Studio",
+  "shortName": "Makovelle",
+  "tagline": "Building intelligent solutions for modern businesses.",
+  "url": "https://www.makovelle.example",
+  "locale": "en_ZW",
+  "country": "Zimbabwe",
+  "countryCode": "ZW",
+
+  "contact": {
+    "email": "makovelle.studio@gmail.com",
+    "phone": "+263 78 896 9018",
+    "whatsapp": "+263 78 896 9018",
+    "whatsappAlt": "+91 70099 64380",
+    "whatsappMessage": "Hello Makovelle, I would like to discuss a project.",
+    "city": "Harare",
+    "hours": "Monday – Saturday, 8:00 am – 5:00 pm",
+    "openingHours": "Mo-Sa 08:00-17:00"
+  },
+
+  "social": {
+    "linkedin": "",
+    "facebook": "",
+    "instagram": ""
+  },
+
+  "form": {
+    "_readme": "Set `endpoint` to a form service URL (e.g. https://formspree.io/f/xxxxxxx). Leave empty and the form will NOT pretend to send; it offers WhatsApp/email instead. See README > Contact form.",
+    "endpoint": ""
+  }
+}

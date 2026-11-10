@@ -1,0 +1,116 @@
+<!--meta {
+  "title": "Contact Us | Makovelle Technologies Studio, Zimbabwe",
+  "description": "Discuss your website, school management system or custom software project with Makovelle Technologies Studio. Contact us by form, WhatsApp, email or phone.",
+  "nav": "contact",
+  "priority": "0.9"
+} -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <ol class="breadcrumb reveal" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Contact</li></ol>
+        <div class="page-hero__grid">
+          <div>
+            <p class="eyebrow reveal">Contact us</p>
+            <h1 id="page-title" class="display display--xl reveal">Let's build <em>something.</em></h1>
+          </div>
+          <p class="lead reveal">Have a project in mind? Let's discuss how technology can help your organisation move forward. Tell us a little about what you need and we'll get back to you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Contact form and details">
+      <div class="container contact-grid">
+
+        <aside class="contact-aside" id="contact-options" aria-label="Other ways to reach us">
+          <div class="contact-option contact-option--wa reveal">
+            <span class="label">Fastest response</span>
+            <h2 class="display display--sm" style="margin:.5rem 0 .75rem">Chat with us on WhatsApp</h2>
+            <p>Prefer a quick conversation? Send us a message and we'll reply as soon as we can.</p>
+            <a class="btn btn--gold" href="{{links.whatsapp}}" {{{links.whatsappExternal}}}>{{> icon-whatsapp}} Start a WhatsApp chat</a>
+            <div class="wa-numbers">{{{raw.waContact}}}</div>
+          </div>
+          <div class="contact-option reveal">
+            <span class="label">Email</span>
+            <a href="{{links.email}}">{{site.contact.email}}</a>
+          </div>
+          <div class="contact-option reveal">
+            <span class="label">Phone</span>
+            <a href="{{links.phone}}">{{site.contact.phone}}</a>
+          </div>
+          <div class="contact-option reveal">
+            <span class="label">Location &amp; hours</span>
+            <p style="margin:.2rem 0 0">{{site.contact.city}}, {{site.country}}<br><span class="muted">{{site.contact.hours}}</span></p>
+          </div>
+        </aside>
+
+        <div class="reveal">
+          <form class="form" id="contact-form" novalidate
+                data-endpoint="{{form.endpoint}}" data-whatsapp="{{form.whatsapp}}" data-email="{{form.email}}"
+                aria-labelledby="form-title" aria-describedby="form-intro">
+            <div>
+              <h2 id="form-title" class="display display--sm" style="margin-bottom:.5rem">Tell us about your project</h2>
+              <p id="form-intro" class="muted small" style="margin:0">Fields marked <span aria-hidden="true" style="color:var(--gold)">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="f-name">Full name<span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="e-name">
+                <p class="field__error" id="e-name" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email address<span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160" aria-describedby="e-email">
+                <p class="field__error" id="e-email" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="f-phone">Phone number<span class="opt">(optional)</span></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+263 …" aria-describedby="e-phone">
+                <p class="field__error" id="e-phone" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-org">Organisation name<span class="opt">(optional)</span></label>
+                <input id="f-org" name="organisation" type="text" autocomplete="organization" maxlength="160">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-service">Service required<span class="req" aria-hidden="true">*</span></label>
+              <select id="f-service" name="service" required aria-describedby="e-service">
+                <option value="">Select a service…</option>
+                <option value="website">Website design &amp; development</option>
+                <option value="school-system">School management system</option>
+                <option value="custom-software">Custom business software</option>
+                <option value="erp-automation">ERP &amp; business automation</option>
+                <option value="support">Software maintenance &amp; support</option>
+                <option value="not-sure">Not sure yet / other</option>
+              </select>
+              <p class="field__error" id="e-service" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-message">Project description<span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-message" name="message" required minlength="20" maxlength="4000" aria-describedby="h-message e-message" placeholder="What would you like to achieve? Any timelines or current challenges?"></textarea>
+              <p class="field__hint" id="h-message">A few sentences is plenty: what you need, who it's for and any timeline.</p>
+              <p class="field__error" id="e-message" aria-live="polite"></p>
+            </div>
+
+            <!-- Spam trap: hidden from people, often filled in by bots -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-company-website">Leave this field empty</label>
+              <input id="f-company-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+
+            <div class="form__foot">
+              <p>We'll only use your details to respond to your enquiry.</p>
+              <button class="btn btn--gold btn--lg" type="submit">Send enquiry <span class="btn__arrow" aria-hidden="true">→</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="/assets/js/contact.js" defer></script>

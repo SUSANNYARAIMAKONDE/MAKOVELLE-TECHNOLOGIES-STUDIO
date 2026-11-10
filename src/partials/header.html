@@ -1,0 +1,40 @@
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="logo" href="/" aria-label="{{site.name}} — home">
+        {{> logo}}
+        <span class="logo__text"><span class="logo__name">Makovelle</span><span class="logo__sub">Technologies Studio</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="/" data-nav="home">Home</a></li>
+          <li><a class="nav__link" href="/about/" data-nav="about">About</a></li>
+          <li><a class="nav__link" href="/services/" data-nav="services">Services</a></li>
+          <li><a class="nav__link" href="/work/" data-nav="work">Our Work</a></li>
+          <li><a class="nav__link" href="/contact/" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--gold btn--sm site-header__cta" href="/contact/">Start a project</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="visually-hidden">Open menu</span>
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <nav class="container mobile-menu__inner" aria-label="Mobile">
+        <ol class="mobile-menu__list">
+          <li><a href="/" data-nav="home"><span>01</span>Home</a></li>
+          <li><a href="/about/" data-nav="about"><span>02</span>About</a></li>
+          <li><a href="/services/" data-nav="services"><span>03</span>Services</a></li>
+          <li><a href="/work/" data-nav="work"><span>04</span>Our Work</a></li>
+          <li><a href="/contact/" data-nav="contact"><span>05</span>Contact</a></li>
+        </ol>
+        <div class="mobile-menu__foot">
+          <a class="btn btn--gold" href="/contact/">Let's Build Something</a>
+          <a class="btn btn--ghost" href="{{links.whatsapp}}" {{{links.whatsappExternal}}}>Chat on WhatsApp</a>
+        </div>
+      </nav>
+    </div>
+  </header>
