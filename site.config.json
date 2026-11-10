@@ -28,6 +28,6 @@
 
   "form": {
     "_readme": "Set `endpoint` to a form service URL (e.g. https://formspree.io/f/xxxxxxx). Leave empty and the form will NOT pretend to send; it offers WhatsApp/email instead. See README > Contact form.",
-    "endpoint": ""
+    "endpoint": "https://formspree.io/f/mbggnebj"
   }
 }
